@@ -16,7 +16,6 @@ int brightness = 10;
 int currentLED = 0;  // Track which LED is currently on (0-7)
 
 void setup() {
-  Serial.begin(9600);
   
   // Initialize Modulino I2C communication
   Modulino.begin();
@@ -39,8 +38,6 @@ void loop() {
     if (currentLED < 7) {  // Don't go past the last LED
       currentLED++;
       updateLEDs();
-      Serial.print("Moved right to LED: ");
-      Serial.println(currentLED);
     }
   } 
   else if (direction == -1) {
@@ -48,8 +45,6 @@ void loop() {
     if (currentLED > 0) {  // Don't go past the first LED
       currentLED--;
       updateLEDs();
-      Serial.print("Moved left to LED: ");
-      Serial.println(currentLED);
     }
   }
   
