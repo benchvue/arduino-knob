@@ -1,11 +1,3 @@
-/*
- * Modulino Knob LED Controller
- * Turn knob counter-clockwise to move LED left (toward position 0)
- * Turn knob clockwise to move LED right (toward position 7)
- * Only one LED is lit at a time
- * Movement stops at boundaries (won't go below 0 or above 7)
- */
-
 #include <Modulino.h>
 
 // Create Modulino objects
